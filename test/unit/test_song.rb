@@ -6,7 +6,7 @@ class TestSong < NowPlayingTestCase
 
   def setup
     @song = mocked('setup') do
-      Song.load
+      Mapper.map(Loader.load)
     end
   end
 
@@ -14,5 +14,6 @@ class TestSong < NowPlayingTestCase
     refute_nil(@song)
     assert_equal('Billy Talent', @song.artist)
     assert_equal('Red flag', @song.title)
+    assert_equal('Billy Talent: Red flag', @song.to_s)
   end
 end

@@ -6,3 +6,19 @@ Bundler.require
 
 require 'swr3-nowplaying'
 
+include SWR3::NowPlaying
+
+previous = nil
+
+loop do
+  song = Mapper.map(Loader.load)
+
+  if song != previous
+require 'pry'
+binding.pry
+    puts "#{Time.new} - #{song}"
+    previous = song
+  end
+
+  sleep 10
+end
