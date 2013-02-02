@@ -6,6 +6,3 @@ Bundler.require
 
 require 'swr3-nowplaying'
 
-j = JSON.load open 'http://www.swr3.de/export/json/-/id=202234/gp1=1/wi3aps/index.json'
-j['frontmod'].first['artist']['name']
-j['frontmod'].first['title']

@@ -1,3 +1,5 @@
+require 'json'
+require 'open-uri'
 require 'require_all'
 require_rel 'swr3-nowplaying'
 
