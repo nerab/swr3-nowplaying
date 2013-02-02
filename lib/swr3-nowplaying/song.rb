@@ -7,6 +7,11 @@ module SWR3
         @artist, @title = artist, title
       end
 
+      def ==(other)
+        return false if other.nil?
+        self.artist == other.artist && self.title == other.title
+      end
+
       def to_s
         "#{@artist}: #{@title}"
       end
