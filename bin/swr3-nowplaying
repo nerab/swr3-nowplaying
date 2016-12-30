@@ -1,21 +1,21 @@
 #!/usr/bin/env ruby
-# -*- encoding: utf-8 -*-
+# frozen_string_literal: true
 
-require 'bundler'
-Bundler.require
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'swr3-nowplaying'
-include SWR3::NowPlaying
+require 'swr3_now_playing/loader'
+require 'swr3_now_playing/mapper'
 
-previous = nil
+json = SWR3::NowPlaying::Loader.load
 
-loop do
-  song = Mapper.map(Loader.load)
+begin
+  song = SWR3::NowPlaying::Mapper.map(json)
+  puts "#{Time.new} - #{song}"
+rescue JSON::ParserError => e
+  warn "Error parsing JSON response: #{e.message}"
+  warn 'Offending document is: '
+  warn json
 
-  if song != previous
-    puts "#{Time.new} - #{song}"
-    previous = song
-  end
-
-  sleep 10
+  exit 1
 end

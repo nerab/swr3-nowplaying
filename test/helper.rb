@@ -1,5 +1,5 @@
+# frozen_string_literal: true
 require 'minitest/autorun'
-require 'swr3-nowplaying'
 require 'vcr'
 
 VCR.configure do |c|
@@ -7,8 +7,8 @@ VCR.configure do |c|
   c.hook_into :webmock
 end
 
-class NowPlayingTestCase < MiniTest::Unit::TestCase
+class NowPlayingTestCase < MiniTest::Test
   def mocked(cassette, &block)
-    VCR.use_cassette("#{self.class.name}_#{cassette}", :record => :new_episodes){block.call}
+    VCR.use_cassette("#{self.class.name}_#{cassette}", record: :new_episodes) { yield }
   end
 end

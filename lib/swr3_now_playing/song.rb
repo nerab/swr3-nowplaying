@@ -1,10 +1,12 @@
+# frozen_string_literal: true
 module SWR3
   module NowPlaying
     class Song
       attr_reader :artist, :title
 
       def initialize(artist, title)
-        @artist, @title = artist, title
+        @artist = artist
+        @title = title
       end
 
       def ==(other)
