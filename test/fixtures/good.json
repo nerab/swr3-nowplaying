@@ -1,0 +1,38 @@
+{ "detail": {
+  "@id": "202234",
+  "leadText": null,
+  "text": null,
+  "topline": "SWR3 Musikrecherche",
+  "title": "Die letzten 13 Titel auf SWR3",
+  "detailImages": [
+  ]}, "frontmod": [{ "title" : "Breathing underwater"
+       , "externalId" : "williams_title27448"
+       , "cover" : { "@id": "4244326",
+    "alt": "CD-Cover Sandé, Emeli - Breathing underwater",
+    "subline": "CD-Cover: Sandé, Emeli - Breathing underwater",
+    "copyright": "SWR3.de"
+    ,"detail": { "src": "http://www.swr3.de/-/id=4244326/property=detail/width=200/height=200/f69z8d/index.jpg",
+                   "width": 200,
+                   "height": 200}
+            
+    ,"small": { "src": "http://www.swr3.de/-/id=4244326/property=small/width=100/height=100/122v5mf/index.jpg",
+                   "width": 100,
+                   "height": 100}
+            
+    ,"thumbnail": { "src": "http://www.swr3.de/-/id=4244326/property=thumbnail/width=160/height=160/bv9ur/index.jpg",
+                   "width": 160,
+                   "height": 160}
+            
+    ,"zoom": { "src": "http://www.swr3.de/-/id=4244326/property=zoom/width=500/height=500/1ugkxk9/index.jpg",
+                   "width": 500,
+                   "height": 500}
+            
+    
+}
+       , "artist" : { "name" : "Sandé, Emeli"
+                     , "link" : "http://www.swr3.de/musik/poplexikon/-/id=927882/did=1199388/cf24yn/index.html"
+                        , "externalId" : "williams_artist8149"                         
+                     },
+       "playDate" : 1483110825000
+     }
+    ]}

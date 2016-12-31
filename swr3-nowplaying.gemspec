@@ -3,6 +3,7 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'swr3_now_playing/version'
+require 'english'
 
 # rubocop:disable Metrics/BlockLength
 Gem::Specification.new do |gem|
@@ -15,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "http://github.com/nerab/#{gem.name}"
 
   gem.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
-  gem.executables   = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
+  gem.executables   = gem.files.grep(%r{^exe/}).map { |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
@@ -27,6 +28,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'guard'
   gem.add_development_dependency 'guard-minitest'
   gem.add_development_dependency 'guard-bundler'
+  gem.add_development_dependency 'terminal-notifier'
   gem.add_development_dependency 'terminal-notifier-guard'
   gem.add_development_dependency 'rb-inotify'
   gem.add_development_dependency 'libnotify'

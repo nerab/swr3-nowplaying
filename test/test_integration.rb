@@ -2,10 +2,21 @@
 # frozen_string_literal: true
 require 'helper'
 
+require 'vcr'
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'test/fixtures/vcr'
+  c.hook_into :webmock
+end
+
+def mocked(cassette, &block)
+  VCR.use_cassette("#{self.class.name}_#{cassette}", record: :new_episodes) { yield }
+end
+
 require 'swr3_now_playing/mapper'
 require 'swr3_now_playing/loader'
 
-class TestSong < NowPlayingTestCase
+class IntegrationTest < MiniTest::Test
   include SWR3::NowPlaying
 
   def setup

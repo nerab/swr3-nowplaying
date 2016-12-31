@@ -2,6 +2,13 @@
 
 The German radio station "SWR3" provides details about the currently playing song. This gem parses the feed and provides the details as Ruby object.
 
+## Usage
+
+```bash
+$ swr3-nowplaying
+2016-12-31 14:14:04 +0100 - Lost Frequencies: What is love 2016
+```
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -15,15 +22,3 @@ And then execute:
 Or install it yourself as:
 
     $ gem install swr3-nowplaying
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
