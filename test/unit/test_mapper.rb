@@ -9,9 +9,14 @@ class MapperTest < MiniTest::Test
     refute_nil(result)
   end
 
-  def test_bad
-    assert_raises do
-      SWR3::NowPlaying::Mapper.map('test/fixtures/broken.json')
-    end
+  def test_fixable
+    result = SWR3::NowPlaying::Mapper.map(File.new('test/fixtures/fixable.json'))
+    refute_nil(result)
+  end
+
+  def test_unfixable
+    assert_raises(JSON::ParserError) {
+      SWR3::NowPlaying::Mapper.map(File.new('test/fixtures/unfixable.json'))
+    }
   end
 end
