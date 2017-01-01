@@ -7,6 +7,9 @@ namespace :test do
   desc 'Run all specs'
   task all: ['rubocop:auto_correct', :unit, :integration]
 
+  desc 'Run ci'
+  task ci: [:rubocop, :unit, :integration]
+
   Rake::TestTask.new('unit') do |test|
     test.libs << 'lib' << 'test' << 'test/unit'
     test.pattern = 'test/unit/test_*.rb'
