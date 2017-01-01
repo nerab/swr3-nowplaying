@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'English'
 require 'swr3_now_playing/version'
-require 'english'
 
 # rubocop:disable Metrics/BlockLength
 Gem::Specification.new do |gem|
