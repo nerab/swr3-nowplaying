@@ -16,6 +16,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "http://github.com/nerab/#{gem.name}"
 
   gem.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
+  gem.bindir        = 'exe'
   gem.executables   = gem.files.grep(%r{^exe/}).map { |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
