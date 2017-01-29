@@ -10,7 +10,7 @@ require 'swr3_now_playing/mapper'
 json = SWR3::NowPlaying::Loader.load
 
 begin
-  song = SWR3::NowPlaying::Mapper.map(json)
+  song = SWR3::NowPlaying::SongMapper.map(json)
   puts "#{Time.new} - #{song}"
 rescue JSON::ParserError => e
   warn "Error parsing JSON response: #{e.message}"

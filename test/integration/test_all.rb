@@ -21,14 +21,18 @@ class IntegrationTest < MiniTest::Test
 
   def setup
     @song = mocked('setup') do
-      Mapper.map(Loader.load)
+      SongMapper.map(Loader.load)
     end
   end
 
-  def test_song
+  def test_song_title
     refute_nil(@song)
-    assert_equal('Billy Talent', @song.artist)
     assert_equal('Red flag', @song.title)
     assert_equal('Billy Talent: Red flag', @song.to_s)
+  end
+
+  def test_artist
+    refute_nil(@song)
+    assert_equal('Billy Talent', @song.artist.name)
   end
 end

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 require 'json'
 require 'swr3_now_playing/song'
+require 'swr3_now_playing/artist'
+require 'swr3_now_playing/cover'
 
 module SWR3
   module NowPlaying
@@ -10,7 +12,27 @@ module SWR3
       end
     end
 
-    class Mapper
+    class ArtistMapper
+      class << self
+        def map(json)
+          Artist.new(json['name'], json['link'])
+        end
+      end
+    end
+
+    class CoverMapper
+      class << self
+        def map(json)
+          Cover.new.tap do |cover|
+            %w(small thumbnail detail zoom).each do |size|
+              cover[size] = json[size]['src']
+            end
+          end
+        end
+      end
+    end
+
+    class SongMapper
       class << self
         def map(json)
           fixers = [MissingNullFixer.new]
@@ -27,8 +49,9 @@ module SWR3
             end
           end
 
-          artist = j['frontmod'].first['artist']['name']
+          artist = ArtistMapper.map(j['frontmod'].first['artist'])
           title = j['frontmod'].first['title']
+          cover = CoverMapper.map(j['frontmod'].first['cover'])
 
           Song.new(artist, title)
         end

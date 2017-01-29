@@ -2,20 +2,16 @@
 module SWR3
   module NowPlaying
     class Song
-      attr_reader :artist, :title
+      attr_reader :artist, :title, :cover
 
-      def initialize(artist, title)
+      def initialize(artist, title, cover=nil)
         @artist = artist
         @title = title
-      end
-
-      def ==(other)
-        return false if other.nil?
-        self.artist == other.artist && self.title == other.title
+        @cover = cover
       end
 
       def to_s
-        "#{@artist}: #{@title}"
+        "#{artist.name}: #{title}"
       end
     end
   end
