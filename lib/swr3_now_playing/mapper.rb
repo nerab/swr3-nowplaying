@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 require 'json'
+require 'cgi'
 require 'swr3_now_playing/song'
 require 'swr3_now_playing/artist'
 require 'swr3_now_playing/cover'
@@ -9,7 +10,7 @@ module SWR3
     class ArtistMapper
       class << self
         def map(json)
-          Artist.new(json['name'], json['link'])
+          Artist.new(CGI.unescapeHTML(json['name']), json['link'])
         end
       end
     end
@@ -50,7 +51,7 @@ module SWR3
           end
 
           artist = ArtistMapper.map(j['frontmod'].first['artist'])
-          title = j['frontmod'].first['title']
+          title = CGI.unescapeHTML(j['frontmod'].first['title'])
           cover = CoverMapper.map(j['frontmod'].first['cover'])
 
           Song.new(artist, title, cover).tap do |song|

@@ -49,4 +49,20 @@ class MapperTest < MiniTest::Test
     result = SWR3::NowPlaying::SongMapper.map(File.new('test/fixtures/good.json'))
     assert_equal(Time.at(1483110825), result.play_date)
   end
+
+  def test_html_entities_title
+    fixture = JSON.parse(File.new('test/fixtures/good.json').read)
+    fixture['frontmod'].first['title'] = 'and nothin&#39; on'
+    io = StringIO.new(JSON.dump(fixture))
+    result = SWR3::NowPlaying::SongMapper.map(io)
+    assert_equal("and nothin' on", result.title)
+  end
+
+  def test_html_entities_artist_name
+    fixture = JSON.parse(File.new('test/fixtures/good.json').read)
+    fixture['frontmod'].first['artist']['name'] = 'Rag&#39;n&#39;bone Man'
+    io = StringIO.new(JSON.dump(fixture))
+    result = SWR3::NowPlaying::SongMapper.map(io)
+    assert_equal("Rag'n'bone Man", result.artist.name)
+  end
 end
