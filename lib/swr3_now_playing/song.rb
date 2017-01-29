@@ -3,6 +3,7 @@ module SWR3
   module NowPlaying
     class Song
       attr_reader :artist, :title, :cover
+      attr_accessor :play_date
 
       def initialize(artist, title, cover=nil)
         @artist = artist

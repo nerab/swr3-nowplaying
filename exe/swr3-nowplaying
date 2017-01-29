@@ -11,7 +11,7 @@ json = SWR3::NowPlaying::Loader.load
 
 begin
   song = SWR3::NowPlaying::SongMapper.map(json)
-  puts "#{Time.new} - #{song}"
+  puts "#{song.play_date} - #{song}"
 rescue JSON::ParserError => e
   warn "Error parsing JSON response: #{e.message}"
   warn 'Offending document is: '

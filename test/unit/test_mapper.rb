@@ -44,4 +44,9 @@ class MapperTest < MiniTest::Test
       SWR3::NowPlaying::SongMapper.map(File.new('test/fixtures/unfixable.json'))
     }
   end
+
+  def test_play_date
+    result = SWR3::NowPlaying::SongMapper.map(File.new('test/fixtures/good.json'))
+    assert_equal(Time.at(1483110825), result.play_date)
+  end
 end

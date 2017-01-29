@@ -6,12 +6,6 @@ require 'swr3_now_playing/cover'
 
 module SWR3
   module NowPlaying
-    class MissingNullFixer
-      def fix(stream)
-        stream.gsub(/{ "detail": ,/, '{ "detail": {},')
-      end
-    end
-
     class ArtistMapper
       class << self
         def map(json)
@@ -29,6 +23,12 @@ module SWR3
             end
           end
         end
+      end
+    end
+
+    class MissingNullFixer
+      def fix(stream)
+        stream.gsub(/{ "detail": ,/, '{ "detail": {},')
       end
     end
 
@@ -53,7 +53,13 @@ module SWR3
           title = j['frontmod'].first['title']
           cover = CoverMapper.map(j['frontmod'].first['cover'])
 
-          Song.new(artist, title)
+          Song.new(artist, title, cover).tap do |song|
+            time_stamp = j['frontmod'].first['playDate']
+
+            if time_stamp
+              song.play_date = Time.at(time_stamp / 1000)
+            end
+          end
         end
       end
     end
