@@ -5,10 +5,10 @@ require 'rake/testtask'
 
 namespace :test do
   desc 'Run all specs'
-  task all: ['rubocop:auto_correct', :unit, :integration]
+  task all: ['rubocop:auto_correct', :unit, :integration, :system]
 
   desc 'Run ci'
-  task ci: [:rubocop, :unit, :integration]
+  task ci: [:rubocop, :unit, :integration, :system]
 
   Rake::TestTask.new('unit') do |test|
     test.libs << 'lib' << 'test' << 'test/unit'
@@ -18,6 +18,11 @@ namespace :test do
   Rake::TestTask.new('integration') do |test|
     test.libs << 'lib' << 'test'
     test.pattern = 'test/integration/test_*.rb'
+  end
+
+  Rake::TestTask.new('system') do |test|
+    test.libs << 'lib' << 'test'
+    test.pattern = 'test/system/test_*.rb'
   end
 end
 
