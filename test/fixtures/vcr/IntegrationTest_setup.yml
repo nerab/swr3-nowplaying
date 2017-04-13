@@ -2,59 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.swr3.de/export/json/-/id=202234/gp1=1/wi3aps/index.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - application/json;charset=utf-8
-      Cache-Control:
-      - max-age=13
-      Expires:
-      - Sat, 02 Feb 2013 19:16:15 GMT
-      Date:
-      - Sat, 02 Feb 2013 19:16:02 GMT
-      Content-Length:
-      - '1584'
-      Connection:
-      - keep-alive
-    body:
-      encoding: US-ASCII
-      string: "{ \"detail\": {\n  \"@id\": \"202234\",\n  \"leadText\": null,\n  \"text\":
-        null,\n  \"topline\": \"SWR3 Musikrecherche\",\n  \"title\": \"Die letzten
-        13 Titel auf SWR3\",\n  \"detailImages\": [\n  ]}, \"frontmod\":  [{ \"title\"
-        : \"Red flag\"\n       , \"externalId\" : \"williams_title13552\"\n       ,
-        \"cover\" : { \"@id\": \"211180\",\n    \"alt\": \"CD-Cover Billy Talent -
-        Red flag\",\n    \"subline\": \"CD-Cover: Billy Talent - Red flag\",\n    \"copyright\":
-        \"SWR3.de\"\n    ,\"detail\": { \"src\": \"http://www.swr3.de/-/id=211180/property=detail/width=200/height=174/pubVersion=15/18p3xn3/index.jpg\",\n
-        \                  \"width\": 200,\n                   \"height\": 174}\n
-        \           \n    ,\"small\": { \"src\": \"http://www.swr3.de/-/id=211180/property=small/width=100/height=87/pubVersion=15/1mxtehu/index.jpg\",\n
-        \                  \"width\": 100,\n                   \"height\": 87}\n            \n
-        \   ,\"thumbnail\": { \"src\": \"http://www.swr3.de/-/id=211180/property=thumbnail/width=160/height=139/pubVersion=15/1p6camf/index.jpg\",\n
-        \                  \"width\": 160,\n                   \"height\": 139}\n
-        \           \n    ,\"zoom\": { \"src\": \"http://www.swr3.de/-/id=211180/property=zoom/width=500/height=435/pubVersion=15/n4isxq/index.jpg\",\n
-        \                  \"width\": 500,\n                   \"height\": 435}\n
-        \           \n    \n}\n       , \"artist\" : { \"name\" : \"Billy Talent\"\n
-        \                    , \"link\" : \"http://www.swr3.de/musik/poplexikon/Billy-Talent/-/id=927882/did=203054/14tqyuw/index.html\"\n
-        \                       , \"externalId\" : \"williams_artist5897\"                         \n
-        \                    },\n       \"playDate\" : 1359832123000\n     }\n    ]}"
-    http_version: 
-  recorded_at: Sat, 02 Feb 2013 19:16:10 GMT
-- request:
-    method: get
-    uri: http://www.swr3.de/export/json/-/id=202234/gp1=1/wi3aps/index.json
+    uri: https://www.swr3.de/export/json/-/id=202234/gp1=1/wi3aps/index.json
     body:
       encoding: US-ASCII
       string: ''
@@ -75,149 +23,50 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Expires:
-      - Fri, 30 Dec 2016 14:42:06 GMT
+      - Thu, 13 Apr 2017 11:45:05 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Fri, 30 Dec 2016 14:42:06 GMT
+      - Thu, 13 Apr 2017 11:45:05 GMT
       Content-Length:
-      - '1519'
+      - '1536'
       Connection:
       - keep-alive
+      Public-Key-Pins-Report-Only:
+      - pin-sha256="uZEfYpAZQZ0ZDHFSCdNkliD1JLHL+OQZudRMuHKKa3c="; pin-sha256="pvsOo/07kXBfe36yjJgm6H46EJRe7gurjSAeunJgFyg=";
+        pin-sha256="JbQbUG5JMJUoI6brnx0x3vZF6jilxsapbXGVfjhN8Fg="; includeSubdomains';
+        max-age=10; report-uri="https://swr3.report-uri.io/r/default/hpkp/reportOnly"
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' https:; script-src ''self'' ''unsafe-inline'' https:;
+        style-src ''self'' ''unsafe-inline'' https:; img-src ''self'' data: https:;
+        report-uri https://swr3.report-uri.io/r/default/csp/reportOnly;'
+      Content-Security-Policy:
+      - upgrade-insecure-requests
+      Strict-Transport-Security:
+      - max-age=31536000; preload
     body:
       encoding: UTF-8
       string: "{ \"detail\": {\n  \"@id\": \"202234\",\n  \"leadText\": null,\n  \"text\":
         null,\n  \"topline\": \"SWR3 Musikrecherche\",\n  \"title\": \"Die letzten
         13 Titel auf SWR3\",\n  \"detailImages\": [\n  ]}, \"frontmod\": [{ \"title\"
-        : \"My way\"\n       , \"externalId\" : \"williams_title27120\"\n       ,
-        \"cover\" : { \"@id\": \"4153020\",\n    \"alt\": \"CD-Cover Harris, Calvin
-        - My way\",\n    \"subline\": \"CD-Cover: Harris, Calvin - My way\",\n    \"copyright\":
-        \"SWR3.de\"\n    ,\"detail\": { \"src\": \"http://www.swr3.de/-/id=4153020/property=detail/width=200/height=200/794y3g/index.jpg\",\n
+        : \"We built this city\"\n       , \"externalId\" : \"williams_title2760\"\n
+        \      , \"cover\" : { \"@id\": \"793426\",\n    \"alt\": \"CD-Cover Starship
+        - We built this city\",\n    \"subline\": \"CD-Cover: Starship - We built
+        this city\",\n    \"copyright\": \"SWR3.de\"\n    ,\"detail\": { \"src\":
+        \"https://www.swr3.de/-/id=793426/property=detail/width=200/height=200/17upc7z/index.jpg\",\n
         \                  \"width\": 200,\n                   \"height\": 200}\n
-        \           \n    ,\"small\": { \"src\": \"http://www.swr3.de/-/id=4153020/property=small/width=100/height=100/1iid4ll/index.jpg\",\n
+        \           \n    ,\"small\": { \"src\": \"https://www.swr3.de/-/id=793426/property=small/width=100/height=100/n07kii/index.jpg\",\n
         \                  \"width\": 100,\n                   \"height\": 100}\n
-        \           \n    ,\"thumbnail\": { \"src\": \"http://www.swr3.de/-/id=4153020/property=thumbnail/width=160/height=160/953k3g/index.jpg\",\n
+        \           \n    ,\"thumbnail\": { \"src\": \"https://www.swr3.de/-/id=793426/property=thumbnail/width=160/height=160/1ssz2oa/index.jpg\",\n
         \                  \"width\": 160,\n                   \"height\": 160}\n
-        \           \n    ,\"zoom\": { \"src\": \"http://www.swr3.de/-/id=4153020/property=zoom/width=500/height=500/5y0d55/index.jpg\",\n
+        \           \n    ,\"zoom\": { \"src\": \"https://www.swr3.de/-/id=793426/property=zoom/width=500/height=500/10ii3sz/index.jpg\",\n
         \                  \"width\": 500,\n                   \"height\": 500}\n
-        \           \n    \n}\n       , \"artist\" : { \"name\" : \"Harris, Calvin\"\n
-        \                    , \"link\" : \"http://www.swr3.de/musik/poplexikon/-/id=927882/did=342722/1ejk03z/index.html\"\n
-        \                       , \"externalId\" : \"williams_artist6503\"                         \n
-        \                    },\n       \"playDate\" : 1483108845000\n     }\n    ]}"
+        \           \n    \n}\n       , \"artist\" : { \"name\" : \"Starship\"\n                     ,
+        \"link\" : \"https://www.swr3.de/musik/poplexikon/-/id=927882/did=67074/varai6/index.html\"\n
+        \                       , \"externalId\" : \"williams_artist1241\"                         \n
+        \                    },\n       \"playDate\" : 1492083718000\n     }\n    ]}"
     http_version: 
-  recorded_at: Fri, 30 Dec 2016 14:42:06 GMT
-- request:
-    method: get
-    uri: http://www.swr3.de/export/json/-/id=202234/gp1=1/wi3aps/index.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=utf-8
-      Vary:
-      - Accept-Encoding
-      Expires:
-      - Fri, 30 Dec 2016 14:42:08 GMT
-      Cache-Control:
-      - max-age=0, no-cache, no-store
-      Pragma:
-      - no-cache
-      Date:
-      - Fri, 30 Dec 2016 14:42:08 GMT
-      Content-Length:
-      - '1519'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: "{ \"detail\": {\n  \"@id\": \"202234\",\n  \"leadText\": null,\n  \"text\":
-        null,\n  \"topline\": \"SWR3 Musikrecherche\",\n  \"title\": \"Die letzten
-        13 Titel auf SWR3\",\n  \"detailImages\": [\n  ]}, \"frontmod\": [{ \"title\"
-        : \"My way\"\n       , \"externalId\" : \"williams_title27120\"\n       ,
-        \"cover\" : { \"@id\": \"4153020\",\n    \"alt\": \"CD-Cover Harris, Calvin
-        - My way\",\n    \"subline\": \"CD-Cover: Harris, Calvin - My way\",\n    \"copyright\":
-        \"SWR3.de\"\n    ,\"detail\": { \"src\": \"http://www.swr3.de/-/id=4153020/property=detail/width=200/height=200/794y3g/index.jpg\",\n
-        \                  \"width\": 200,\n                   \"height\": 200}\n
-        \           \n    ,\"small\": { \"src\": \"http://www.swr3.de/-/id=4153020/property=small/width=100/height=100/1iid4ll/index.jpg\",\n
-        \                  \"width\": 100,\n                   \"height\": 100}\n
-        \           \n    ,\"thumbnail\": { \"src\": \"http://www.swr3.de/-/id=4153020/property=thumbnail/width=160/height=160/953k3g/index.jpg\",\n
-        \                  \"width\": 160,\n                   \"height\": 160}\n
-        \           \n    ,\"zoom\": { \"src\": \"http://www.swr3.de/-/id=4153020/property=zoom/width=500/height=500/5y0d55/index.jpg\",\n
-        \                  \"width\": 500,\n                   \"height\": 500}\n
-        \           \n    \n}\n       , \"artist\" : { \"name\" : \"Harris, Calvin\"\n
-        \                    , \"link\" : \"http://www.swr3.de/musik/poplexikon/-/id=927882/did=342722/1ejk03z/index.html\"\n
-        \                       , \"externalId\" : \"williams_artist6503\"                         \n
-        \                    },\n       \"playDate\" : 1483108845000\n     }\n    ]}"
-    http_version: 
-  recorded_at: Fri, 30 Dec 2016 14:42:08 GMT
-- request:
-    method: get
-    uri: http://www.swr3.de/export/json/-/id=202234/gp1=1/wi3aps/index.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=utf-8
-      Vary:
-      - Accept-Encoding
-      Expires:
-      - Fri, 30 Dec 2016 14:42:12 GMT
-      Cache-Control:
-      - max-age=0, no-cache, no-store
-      Pragma:
-      - no-cache
-      Date:
-      - Fri, 30 Dec 2016 14:42:12 GMT
-      Content-Length:
-      - '1519'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: "{ \"detail\": {\n  \"@id\": \"202234\",\n  \"leadText\": null,\n  \"text\":
-        null,\n  \"topline\": \"SWR3 Musikrecherche\",\n  \"title\": \"Die letzten
-        13 Titel auf SWR3\",\n  \"detailImages\": [\n  ]}, \"frontmod\": [{ \"title\"
-        : \"My way\"\n       , \"externalId\" : \"williams_title27120\"\n       ,
-        \"cover\" : { \"@id\": \"4153020\",\n    \"alt\": \"CD-Cover Harris, Calvin
-        - My way\",\n    \"subline\": \"CD-Cover: Harris, Calvin - My way\",\n    \"copyright\":
-        \"SWR3.de\"\n    ,\"detail\": { \"src\": \"http://www.swr3.de/-/id=4153020/property=detail/width=200/height=200/794y3g/index.jpg\",\n
-        \                  \"width\": 200,\n                   \"height\": 200}\n
-        \           \n    ,\"small\": { \"src\": \"http://www.swr3.de/-/id=4153020/property=small/width=100/height=100/1iid4ll/index.jpg\",\n
-        \                  \"width\": 100,\n                   \"height\": 100}\n
-        \           \n    ,\"thumbnail\": { \"src\": \"http://www.swr3.de/-/id=4153020/property=thumbnail/width=160/height=160/953k3g/index.jpg\",\n
-        \                  \"width\": 160,\n                   \"height\": 160}\n
-        \           \n    ,\"zoom\": { \"src\": \"http://www.swr3.de/-/id=4153020/property=zoom/width=500/height=500/5y0d55/index.jpg\",\n
-        \                  \"width\": 500,\n                   \"height\": 500}\n
-        \           \n    \n}\n       , \"artist\" : { \"name\" : \"Harris, Calvin\"\n
-        \                    , \"link\" : \"http://www.swr3.de/musik/poplexikon/-/id=927882/did=342722/1ejk03z/index.html\"\n
-        \                       , \"externalId\" : \"williams_artist6503\"                         \n
-        \                    },\n       \"playDate\" : 1483108845000\n     }\n    ]}"
-    http_version: 
-  recorded_at: Fri, 30 Dec 2016 14:42:12 GMT
+  recorded_at: Thu, 13 Apr 2017 11:45:05 GMT
 recorded_with: VCR 3.0.3

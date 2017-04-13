@@ -28,14 +28,14 @@ class IntegrationTest < MiniTest::Test
   end
 
   def test_song
-    assert_equal('Billy Talent: Red flag', @song.to_s)
+    assert_equal('Starship: We built this city', @song.to_s)
   end
 
   def test_song_title
-    assert_equal('Red flag', @song.title)
+    assert_equal('We built this city', @song.title)
   end
 
   def test_artist
-    assert_equal('Billy Talent', @song.artist.name)
+    assert_equal('Starship', @song.artist.name)
   end
 end
