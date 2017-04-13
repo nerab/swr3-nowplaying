@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'bundler/gem_tasks'
 require 'rubocop/rake_task'
 require 'rake/testtask'
@@ -8,7 +9,7 @@ namespace :test do
   task all: ['rubocop:auto_correct', :unit, :integration, :system]
 
   desc 'Run ci'
-  task ci: [:rubocop, :unit, :integration, :system]
+  task ci: %i[rubocop unit integration system]
 
   Rake::TestTask.new('unit') do |test|
     test.libs << 'lib' << 'test' << 'test/unit'

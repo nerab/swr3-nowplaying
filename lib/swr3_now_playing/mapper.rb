@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'json'
 require 'cgi'
 require 'swr3_now_playing/song'
@@ -19,7 +20,7 @@ module SWR3
       class << self
         def map(json)
           Cover.new.tap do |cover|
-            %w(small thumbnail detail zoom).each do |size|
+            %w[small thumbnail detail zoom].each do |size|
               cover[size] = json[size]['src']
             end
           end
