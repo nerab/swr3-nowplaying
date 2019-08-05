@@ -1,9 +1,4 @@
 language: ruby
 rvm:
-  - 2.3.3
-  - 2.4.1
-before_install:
-  - gem update --system --no-doc
-  - gem install bundler
-bundler_args: --without production
+  - 2.6.3
 script: bundle exec rake test:ci
